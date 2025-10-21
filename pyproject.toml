@@ -1,23 +1,11 @@
 [project]
 name = "flake8-odoo-nameguard"
 version = "0.3.0"
-description = "Flake8 plugin enforcing Odoo field & method naming conventions."
+description = "Flake8 plugin to enforce Odoo field naming conventions"
+authors = [{ name = "tao-thewarat", email = "thewarat.tao19@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.8"
-authors = [{ name = "Your Name", email = "you@example.com" }]
-license = { text = "MIT" }
+dependencies = ["flake8 >= 6.0.0"]
 
 [project.entry-points."flake8.extension"]
-ODN = "odoo_naming.checker:OdooFieldNameChecker"
-
-[project.optional-dependencies]
-test = ["pytest>=8", "pytest-cov>=5"]
-
-[tool.flake8]
-max-line-length = 100
-select = ["ODN", "E", "W", "F"]
-
-[tool.pytest.ini_options]
-addopts = "-q --cov=odoo_naming --cov-report=term-missing"
-testpaths = ["tests"]
-python_files = ["test_*.py"]
+ODN = "odoo_naming:OdooFieldNameChecker"
