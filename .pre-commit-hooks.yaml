@@ -1,0 +1,7 @@
+- id: flake8
+  name: Flake8 Odoo Naming Guard
+  description: Enforce Odoo field naming conventions via flake8 plugin.
+  entry: flake8
+  language: python
+  types: [python]
+  additional_dependencies: ["flake8-odoo-nameguard"]
